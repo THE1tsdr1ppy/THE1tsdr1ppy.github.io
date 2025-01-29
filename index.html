@@ -20,6 +20,7 @@
         }
         .dropdown:hover .dropdown-menu {
             display: block;
+            pointer-events: auto; /* Enable interaction with the dropdown menu */
         }
         .dropdown-menu {
             display: none;
@@ -29,6 +30,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 1rem; /* Increased padding */
             min-width: 200px; /* Increased width */
+            pointer-events: none; /* Disable interaction initially */
         }
         .dropdown-menu a {
             display: block;
@@ -38,10 +40,6 @@
         }
         .dropdown-menu a:hover {
             background-color: #4f46e5;
-        }
-        /* Ensure dropdown stays open when hovering over it */
-        .dropdown-menu:hover {
-            display: block;
         }
     </style>
 </head>
@@ -55,7 +53,7 @@
                     <li><a href="#features" class="hover:text-blue-400">Features</a></li>
                     <li class="dropdown relative">
                         <a href="#" class="hover:text-blue-400">Discover</a>
-                         <div class="dropdown-menu mt-2">
+                        <div class="dropdown-menu mt-2">
                             <a href="multiplayer.html">Multi-player</a>
                             <a href="everything-revamped.html">Everything Revamped</a>
                             <a href="releases.html">Releases</a>
