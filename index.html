@@ -73,6 +73,22 @@
             border-color: #4f46e5;
             outline: none;
         }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -99,8 +115,18 @@
             </div>
         </section>
 
+        <!-- Video Trailer Section -->
+        <section id="trailer" class="section bg-gray-800">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl font-bold mb-8">Game Trailer</h3>
+                <div class="video-container mx-auto max-w-4xl">
+                    <iframe src="https://www.youtube.com/embed/YOUR_TRAILER_ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
         <!-- Progress Section -->
-        <section id="progress" class="section bg-gray-800">
+        <section id="progress" class="section bg-gray-900">
             <div class="container mx-auto text-center">
                 <h3 class="text-3xl font-bold mb-8">Development Progress</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -118,7 +144,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section bg-gray-900">
+        <section id="contact" class="section bg-gray-800">
             <div class="container mx-auto text-center">
                 <h3 class="text-3xl font-bold mb-8">Get in Touch</h3>
                 <form class="max-w-lg mx-auto">
