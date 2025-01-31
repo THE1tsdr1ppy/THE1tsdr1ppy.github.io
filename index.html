@@ -1,159 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jailbreak Remastered - Official Website</title>
+    <title>Jailbreak 2 - Official Website</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(135deg, #1e293b, #0f172a);
             color: #ffffff;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
         .btn-primary {
             background-color: #4f46e5;
             color: #ffffff;
+            transition: all 0.3s ease;
         }
         .btn-primary:hover {
             background-color: #4338ca;
+            transform: translateY(-2px);
         }
         .dropdown:hover .dropdown-menu {
             display: block;
-            pointer-events: auto; /* Enable interaction with the dropdown menu */
+            opacity: 1;
+            pointer-events: auto;
         }
         .dropdown-menu {
             display: none;
             position: absolute;
             background-color: #1e293b;
             border-radius: 0.375rem;
-            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-            padding: 12rem; /* Increased padding */
-            min-width: 200px; /* Increased width */
-            pointer-events: none; /* Disable interaction initially */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+            min-width: 200px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
         }
         .dropdown-menu a {
             display: block;
-            padding: 1rem 2rem; /* Increased padding for links */
+            padding: 0.75rem 1rem;
             color: #ffffff;
             text-decoration: none;
+            transition: background-color 0.3s ease;
         }
         .dropdown-menu a:hover {
             background-color: #4f46e5;
         }
+        .section {
+            padding: 6rem 0;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #6b21a8, #1a1a1a);
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.75rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .form-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #4f46e5;
+            outline: none;
+        }
     </style>
 </head>
 <body>
-    <header class="bg-gray-900 p-4 shadow-lg">
+    <header class="bg-gray-900 p-4 shadow-lg fixed w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Jailbreak Remastered</h1>
+            <h1 class="text-2xl font-bold">Jailbreak 2</h1>
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="#about" class="hover:text-blue-400">About</a></li>
-                    <li><a href="#features" class="hover:text-blue-400">Features</a></li>
-                    <li class="dropdown relative">
-                        <a href="#" class="hover:text-blue-400">Discover</a>
-                        <div class="dropdown-menu mt-2">
-                            <a href="multiplayer.html">Multi-player</a>
-                            <a href="everything-revamped.html">Everything Revamped</a>
-                            <a href="releases.html">Releases</a>
-                        </div>
-                    </li>
-                    <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+                    <li><a href="#about" class="hover:text-blue-400 transition-colors">About</a></li>
+                    <li><a href="#progress" class="hover:text-blue-400 transition-colors">Progress</a></li>
+                    <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="hero" class="h-screen flex items-center justify-center text-center bg-gradient-to-b from-blue-900 via-purple-900 to-gray-900">
-            <div>
-                <h2 class="text-5xl font-extrabold mb-4">Welcome to Jailbreak Remastered</h2>
-                <p class="text-xl mb-8">Customize your vehicle. Rob a bank. Bust criminals robbing an oil rig! In Jailbreak Remastered; a game about cops and robbers you can do many things.</p>
-                <a href="#about" class="btn-primary px-6 py-3 rounded-lg text-lg">Learn More</a>
+        <!-- Hero Section -->
+        <section id="hero" class="hero h-screen flex items-center justify-center text-center">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-5xl font-extrabold mb-6 animate-fade-in">Welcome to Jailbreak 2</h2>
+                <p class="text-xl mb-8 animate-fade-in delay-100">Current Jailbreak 2 progress. In development by <strong>1tsdr1ppy</strong> and <strong>Dahian</strong>.</p>
+                <a href="#progress" class="btn-primary px-8 py-4 rounded-lg text-lg animate-fade-in delay-200">View Progress</a>
             </div>
         </section>
 
-        <!-- Trailer Slot -->
-        <section id="trailer" class="p-8 bg-gray-800">
+        <!-- Progress Section -->
+        <section id="progress" class="section bg-gray-800">
             <div class="container mx-auto text-center">
-                <h3 class="text-3xl font-bold mb-4">Game Trailer</h3>
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/YOUR_TRAILER_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="p-8 bg-gray-800">
-            <div class="container mx-auto text-center">
-                <h3 class="text-3xl font-bold mb-4">About the Game</h3>
-                <p class="text-lg">Jailbreak Remastered is a thrilling experience that combines cutting-edge graphics and immersive gameplay to transport you to another world.</p>
-            </div>
-        </section>
-
-        <section id="features" class="p-8 bg-gray-900">
-            <div class="container mx-auto">
-                <h3 class="text-3xl font-bold mb-6 text-center">Game Features</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2">Feature 1</h4>
-                        <p>Immerse yourself in a remastered once famous game.</p>
+                <h3 class="text-3xl font-bold mb-8">Development Progress</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="feature-card p-6">
+                        <h4 class="text-xl font-bold mb-4">Current Status</h4>
+                        <p>Jailbreak 2 is currently in active development. Follow our updates for the latest news!</p>
                     </div>
-                    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2">Feature 2</h4>
-                        <p>Experience seamless gameplay with an intuitive interface.</p>
-                    </div>
-                    <div class="bg-gray-800 p-4 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2">Feature 3</h4>
-                        <p>Challenge your skills with intense multiplayer modes.</p>
+                    <div class="feature-card p-6">
+                        <h4 class="text-xl font-bold mb-4">Open Source</h4>
+                        <p>This site is open source. Feel free to contribute and improve this page!</p>
+                        <a href="https://github.com/your-repo" class="btn-primary mt-4 inline-block px-6 py-3 rounded-lg">Contribute on GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Discover Sub-Pages -->
-        <section id="multiplayer" class="p-8 bg-gray-800">
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-gray-900">
             <div class="container mx-auto text-center">
-                <h3 class="text-3xl font-bold mb-4">Multi-player</h3>
-                <p class="text-lg">Team up with friends or compete against others in thrilling multiplayer modes.</p>
-            </div>
-        </section>
-
-        <section id="revamped" class="p-8 bg-gray-900">
-            <div class="container mx-auto text-center">
-                <h3 class="text-3xl font-bold mb-4">Everything Revamped</h3>
-                <p class="text-lg">Experience a completely revamped world with enhanced graphics, mechanics, and content.</p>
-            </div>
-        </section>
-
-        <section id="releases" class="p-8 bg-gray-800">
-            <div class="container mx-auto text-center">
-                <h3 class="text-3xl font-bold mb-4">Releases</h3>
-                <p class="text-lg mb-4">Download the latest version of Jailbreak Remastered:</p>
-                <div class="space-y-4">
-                    <a href="https://example.com/download/latest" class="btn-primary px-6 py-3 rounded-lg text-lg">Download Latest Version</a>
-                    <a href="https://example.com/download/previous" class="btn-primary px-6 py-3 rounded-lg text-lg">Previous Versions</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="p-8 bg-gray-800">
-            <div class="container mx-auto text-center">
-                <h3 class="text-3xl font-bold mb-4">Get in Touch</h3>
-                <p class="mb-6">Have questions or feedback? We'd love to hear from you!</p>
+                <h3 class="text-3xl font-bold mb-8">Get in Touch</h3>
                 <form class="max-w-lg mx-auto">
-                    <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 rounded bg-gray-900 border border-gray-700">
-                    <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 rounded bg-gray-900 border border-gray-700">
-                    <textarea placeholder="Your Message" rows="5" class="w-full p-3 mb-4 rounded bg-gray-900 border border-gray-700"></textarea>
-                    <button type="submit" class="btn-primary px-6 py-3 rounded-lg">Send Message</button>
+                    <input type="text" placeholder="Your Name" class="form-input w-full p-3 mb-4 rounded">
+                    <input type="email" placeholder="Your Email" class="form-input w-full p-3 mb-4 rounded">
+                    <textarea placeholder="Your Message" rows="5" class="form-input w-full p-3 mb-6 rounded"></textarea>
+                    <button type="submit" class="btn-primary px-8 py-4 rounded-lg">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 p-4 text-center">
-        <p>&copy; 2025 Jailbreak Remastered. All rights reserved.</p>
+    <footer class="bg-gray-900 p-6 text-center">
+        <p>&copy; 2025 Jailbreak 2. All rights reserved. Developed by <strong>1tsdr1ppy</strong> and <strong>Dahian</strong>.</p>
     </footer>
 </body>
 </html>
