@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download</title>
+    <title>Download Jailbreak 2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,14 +20,20 @@
         .content {
             margin: 20px;
         }
-        .showtime {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
+        .file-list {
+            list-style-type: none;
+            padding: 0;
         }
-        .showtime h3 {
-            margin-top: 0;
+        .file-list li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+        .file-list a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
         }
         .footer {
             background-color: #333;
@@ -43,34 +49,20 @@
 <body>
 
 <header>
-    <h1>Welcome to Our Theater</h1>
+    <h1>Available Releases for Download</h1>
 </header>
 
 <div class="content">
-    <div class="showtime">
-        <h3>Showtime: The Phantom of the Opera</h3>
-        <p>Date: March 10, 2025</p>
-        <p>Time: 7:00 PM</p>
-        <button>Book Tickets</button>
-    </div>
-
-    <div class="showtime">
-        <h3>Showtime: Hamilton</h3>
-        <p>Date: March 15, 2025</p>
-        <p>Time: 6:30 PM</p>
-        <button>Book Tickets</button>
-    </div>
-
-    <div class="showtime">
-        <h3>Showtime: Wicked</h3>
-        <p>Date: March 20, 2025</p>
-        <p>Time: 8:00 PM</p>
-        <button>Book Tickets</button>
-    </div>
+    <ul class="file-list">
+        <li><a href="files/sample1.pdf" download>Download Release 1 (zip)</a></li>
+        <li><a href="files/sample2.docx" download>Download Release 2 (Zip)</a></li>
+        <li><a href="files/sample3.mp3" download>Download Release 3 (Zip)</a></li>
+        <li><a href="files/sample4.zip" download>Download Release 4 (ZIP)</a></li>
+    </ul>
 </div>
 
 <div class="footer">
-    <p>&copy; 2025 Our Theater. All Rights Reserved.</p>
+    <p>&copy; 2025 Jailbreak 2. All Rights Reserved.</p>
 </div>
 
 </body>
